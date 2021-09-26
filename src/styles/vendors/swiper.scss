@@ -1,0 +1,24 @@
+:root {
+  --swiper-navigation-size: 40px;
+  --swiper-navigation-color: $white; 
+}
+
+.swiper-container {
+  height: 100%;
+}
+
+.swiper-button-prev {
+  left: $mainMargin;
+}
+
+.swiper-button-next {
+  right: $mainMargin;
+}
+
+.swiper-pagination-bullet {
+  background-color: $white;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: $mainMargin;
+}
