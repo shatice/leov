@@ -5,13 +5,13 @@
     grid-template-rows: 1fr;
   }
 
-  video,
-  .titlesContainer {
+  .movieVideo,
+  .movieLink {
     grid-column: 1;
     grid-row: 1;
   }
 
-  .titlesContainer {
+  .movieLink {
     z-index: 2;
     justify-self: flex-end;
     align-self: flex-end;

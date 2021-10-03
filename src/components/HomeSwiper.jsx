@@ -1,5 +1,7 @@
 import datas from '../moviesDatas';
 
+import { BrowserRouter as Router, Link } from 'react-router-dom';
+
 /***** COMPONENTS *****/
 import Titles from '../components/Titles';
 
@@ -15,10 +17,14 @@ const HomeSwiper = () =>  {
       { datas.map(( data ) => {       
         return (
           <SwiperSlide id={ data.id } key={ data.id } >
-            <video autoPlay="autoplay" loop="loop">
+            <video autoPlay="autoplay" loop="loop" className="movieVideo">
               <source src={ data.homeVideoUrl } type="video/mp4"/>
             </video>
-            <Titles title={ data.homeTitle } titleSubtitle={ data.homeTitleSubtitle } subtitle={ data.homeSubtitle}/>
+            <Router>
+              <Link to="/movie:id" className="movieLink">
+                <Titles title={ data.homeTitle } titleSubtitle={ data.homeTitleSubtitle } subtitle={ data.homeSubtitle}/>
+              </Link>
+            </Router>
           </SwiperSlide>
         ) 
       }) }
